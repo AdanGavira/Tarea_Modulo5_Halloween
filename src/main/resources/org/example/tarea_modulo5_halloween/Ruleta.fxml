@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.tarea_modulo5_halloween.ControladorRuleta"
+            prefWidth="800" prefHeight="600"
+            styleClass="root">
+
+    <!-- Fondo decorativo -->
+    <ImageView fx:id="fondoImage"
+               layoutX="0" layoutY="0"
+               fitWidth="800" fitHeight="600"
+               preserveRatio="false"/>
+
+    <!-- Título con nombre del participante -->
+    <Label fx:id="tituloRuleta"
+           layoutX="100.0" layoutY="30.0" prefWidth="600.0"
+           style="-fx-text-fill: orange; -fx-font-size: 22px; -fx-font-weight: bold;"
+           text="🎃 Participante"/>
+
+    <!-- Ruleta y marco superpuestos -->
+    <StackPane layoutX="200.0" layoutY="100.0" prefWidth="400.0" prefHeight="400.0">
+        <ImageView fx:id="ruletaImage"
+                   fitWidth="400.0" fitHeight="400.0"
+                   preserveRatio="false"/>
+        <ImageView fx:id="marcoImage"
+                   fitWidth="400.0" fitHeight="400.0"
+                   preserveRatio="false"/>
+    </StackPane>
+
+    <!-- Resultado del giro -->
+    <Label fx:id="resultadoLabel"
+           layoutX="200.0" layoutY="520.0" prefWidth="400.0"
+           wrapText="true"
+           alignment="CENTER"
+           textAlignment="CENTER"
+           styleClass="resultado-label"
+           text=""/>
+
+
+    <!-- Botón para girar -->
+    <Button fx:id="btnGirar"
+            text="GIRAR"
+            layoutX="350.0" layoutY="560.0" prefWidth="100.0"
+            onAction="#girarRuleta"
+            styleClass="button"/>
+
+    <!-- Botón para volver -->
+    <Button fx:id="btnReturn"
+            text="⮐ Volver"
+            layoutX="680.0" layoutY="560.0" prefWidth="100.0"
+            onAction="#volverAlTunel"
+            style="-fx-background-color: orange; -fx-text-fill: black; -fx-font-weight: bold;"/>
+</AnchorPane>
+
+
+
+

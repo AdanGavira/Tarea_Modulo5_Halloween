@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.tarea_modulo5_halloween.ControladorTunel"
+            prefWidth="600" prefHeight="400"
+            style="-fx-background-color: #1c1c1c;">
+
+    <!-- Título centrado -->
+    <HBox layoutY="30" prefWidth="600" alignment="CENTER">
+        <Label fx:id="tituloLabel"
+               text="Entrada al Túnel del Terror"
+               style="-fx-text-fill: orange; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Campo Nombre -->
+    <Label text="Nombre:"
+           layoutX="100" layoutY="100"
+           style="-fx-text-fill: white;"/>
+    <TextField fx:id="txtNombre"
+               layoutX="200" layoutY="95" prefWidth="250"/>
+
+    <!-- Campo Apellidos -->
+    <Label text="Apellidos:"
+           layoutX="100" layoutY="150"
+           style="-fx-text-fill: white;"/>
+    <TextField fx:id="txtApellidos"
+               layoutX="200" layoutY="145" prefWidth="250"/>
+
+    <!-- ComboBox Curso -->
+    <Label text="Curso:"
+           layoutX="100" layoutY="200"
+           style="-fx-text-fill: white;"/>
+    <ComboBox fx:id="Cursos"
+              layoutX="200" layoutY="195" prefWidth="250"/>
+
+    <!-- Botón Entrar -->
+    <Button fx:id="btnEntrar"
+            layoutX="230" layoutY="260" prefWidth="140"
+            text="Entrar al túnel"
+            style="-fx-background-color: orange; -fx-text-fill: black; -fx-font-weight: bold;"
+            onAction="#onEntrar"/>
+
+</AnchorPane>
+
+
+
+

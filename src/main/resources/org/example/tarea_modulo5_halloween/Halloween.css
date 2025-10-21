@@ -1,0 +1,82 @@
+.root {
+    -fx-background-image: url("fondoniebla3.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Creepster", "Chiller", "Segoe UI";
+}
+
+/* Título principal */
+.label-entrada-tunel {
+    -fx-text-fill: #ff7518;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 8, 0.8, 2, 2);
+    -fx-text-alignment: center;
+}
+
+/* Etiquetas de texto */
+.label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: #ffbb00;
+    -fx-border-color: #ff7518;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: #ffbb00;
+    -fx-font-weight: bold;
+    -fx-border-color: #ff7518;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-effect: dropshadow(gaussian, black, 6, 0.5, 2, 2);
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #ffbb00;
+    -fx-background-color: black;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #ff7518;
+    -fx-text-fill: black;
+}
+
+/* Botón principal */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #ff7518, #cc5500);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, black, 6, 0.5, 2, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffaa33, #ff7518);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Caja general */
+.vbox, .grid-pane {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-padding: 20;
+    -fx-border-color: #ff7518;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, black, 15, 0.6, 3, 3);
+}
+

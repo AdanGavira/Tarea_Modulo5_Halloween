@@ -1,0 +1,27 @@
+.root {
+    -fx-background-image: url("fondoRuleta.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: "Creepster", "Chiller", "Segoe UI";
+}
+
+/* Botón principal */
+.button {
+    -fx-background-color: #ff7518;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, black, 4, 0.5, 1, 1);
+    -fx-alignment: center;
+}
+
+.resultado-label {
+    -fx-text-fill: #ffcc00;
+    -fx-font-size: 16px; /* antes 20px */
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, black, 4, 0.5, 0, 1);
+}
+
