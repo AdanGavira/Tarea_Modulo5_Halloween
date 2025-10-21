@@ -79,37 +79,40 @@ public class ControladorRuleta {
     private void girarRuleta() {
         btnGirar.setDisable(true);
         resultadoLabel.setText("");
-
-        // Reiniciar rotación
         ruletaImage.setRotate(0);
 
         int vueltas = 3;
-        int anguloExtra = random.nextInt(360);
+        int anguloExtra = new Random().nextInt(360);
         int anguloFinal = 360 * vueltas + anguloExtra;
 
         RotateTransition rt = new RotateTransition(Duration.seconds(3), ruletaImage);
         rt.setByAngle(anguloFinal);
         rt.setInterpolator(Interpolator.EASE_OUT);
-        rt.setOnFinished(e -> mostrarResultado(anguloFinal));
+        rt.setOnFinished(e -> mostrarResultado(anguloExtra));
         rt.play();
     }
 
+    private void mostrarResultado(int anguloExtra) {
+        // Compensación visual: si el indicador está arriba, usa 0
+        // Si el primer segmento empieza a la derecha, usa 45
+        int compensacionVisual = 0;
 
-    private void mostrarResultado(int anguloFinal) {
-        int anguloRelativo = anguloFinal % 360;
+        int anguloRelativo = (360 - anguloExtra + compensacionVisual) % 360;
         int segmentoIndex = anguloRelativo / 45;
 
-        // Alternancia: par = TRUCO, impar = TRATO
-        boolean esTruco = segmentoIndex % 2 == 0;
+        // Alternancia TRUCO / TRATO
+        String tipo = (segmentoIndex % 2 == 0) ? "TRUCO" : "TRATO";
 
-        String tipo = esTruco ? "TRUCO" : "TRATO";
-        String detalle = esTruco
-                ? trucos.get(random.nextInt(trucos.size()))
-                : tratos.get(random.nextInt(tratos.size()));
+        String detalle = tipo.equals("TRUCO")
+                ? trucos.get(new Random().nextInt(trucos.size()))
+                : tratos.get(new Random().nextInt(tratos.size()));
 
-        resultadoLabel.setText(tipo + ": " + detalle);
+        resultadoLabel.setText("🕸️ " + tipo + ": " + detalle);
         btnGirar.setDisable(false);
     }
+
+
+
 
     @FXML
     private void volverAlTunel() {
