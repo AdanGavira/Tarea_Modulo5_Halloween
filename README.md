@@ -22,7 +22,7 @@ Cuando no rellenas todos los campos aparecerá un mensaje en rojo arriba indican
 
 
   
-<img width="804" height="633" alt="image" src="https://github.com/user-attachments/assets/38553869-f6cc-4098-8a4d-647ab17eb989" />
+<img width="801" height="635" alt="image" src="https://github.com/user-attachments/assets/794c5e73-b086-4c6f-bf23-cb61c18f040a" />
 
 Esta es la segunda interfaz en la que podemos ver la ruleta con un botón que pone girar y otro botón abajo a la derecha que sirve para poder volver a la pantalla principal de inicio de sesión. 
 La función de esta interfaz es hacer girar la ruleta y tocará truco o trato, y depenediendo del resultado de la ruleta, aparecerá un mensaje u otro. 
