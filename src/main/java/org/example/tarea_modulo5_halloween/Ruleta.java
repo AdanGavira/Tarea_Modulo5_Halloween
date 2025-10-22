@@ -19,7 +19,7 @@ public class Ruleta extends Application {
         scene.getStylesheets().add(Ruleta.class.getResource("RuletaHalloween.css").toExternalForm());
 
         // Configurar la ventana principal
-        primaryStage.setTitle("Entrada al Túnel del Terror");
+        primaryStage.setTitle("Ruleta del Terror");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
