@@ -12,7 +12,7 @@ public class EntradaTunel extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EntradaTunel.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("halloween.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("Halloween.css").toExternalForm());
         stage.setTitle("Entrada al Túnel del Terror");
         stage.setScene(scene);
         stage.show();
